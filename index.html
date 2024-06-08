@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <link rel="shortcut icon" type="image/png" href="https://www.mongodb.com/assets/images/global/favicon.ico"/>
+    <script src="https://unpkg.com/realm-web/dist/bundle.iife.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <title>Wildlife Around Us</title>
+</head>
+
+<body>
+  <body style="background-color: rgb(224, 205, 34);">
+    <!-- Your HTML content here -->
+</body>
+
+<h1>Wildlife Around Us</h1>
+<a href="photos.html"><button>Photos</button></a>
+<div>
+    <!-- Login anonymously -->
+    <input type="submit" value="LOGIN" onClick="login()">
+    <!-- Finds todos in todos collection changed from find_todos -->
+    <input type="submit" value="FIND" onClick="find_animals()" >
+    <!--button.style.visibility = "hidden"; -->
+  
+  
+</div>
+
+<form id="animalForm" onsubmit="return false;">
+    <label for="taskInput">Task:</label>
+    <input type="text" id="taskInput" name="task" required>
+    <button type="submit" onclick="insert_todo()">Add</button>
+    <button type="submit" onclick="delete_todo()">Delete</button>
+</form>
+
+
+<div id="user" class="hidden">
+    <p>Logged in as <span id="emailLogged"></span></p>
+    <p>User ID: <span id="userid"></span></p>
+  </div>
+
+
+<!-- Login section -->
+<div id="login-page" class="login-page">
+    <!-- <h1 class="login-header">Log In</h1> -->
+    <div class="form">
+      <div class="login-form">
+        <h4 class="input-title">Email Address</h4>
+        <input
+          id="username"
+          type="text"
+          placeholder="Enter your email address"
+        />
+        <h4 class="input-title">Password</h4>
+        <input type="password" id="password" placeholder="Add a password" />
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- Using this div to display the user ID -->
+<div id="user">
+    <p>User ID: <span id="userid"></span></p>
+</div>
+<!-- Using this div to show the todos -->
+
+
+
+
+
+
+</body>
+
+</html>
